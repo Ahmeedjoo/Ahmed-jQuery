@@ -1,0 +1,446 @@
+*{
+  padding: 0%;
+  margin: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+html{
+  font-size: 16px;
+}
+
+body{
+  background: black;
+  display: flex;
+  justify-content: center;
+}
+
+a{
+  text-decoration: none;
+}
+
+#main{
+  width: 100%;
+  height: 101vh;
+  background:rgba(0, 7, 29, 0.674);
+}
+
+.header ul li{
+  list-style-type: none;
+}
+
+.header ul li a{
+  text-decoration: none;
+  color: aliceblue;
+  font-family: cursive;
+  font-size:1.4rem ;
+  letter-spacing: 1px;
+  font-weight: 600;
+  transition: .4s ease-in-out;
+}
+
+.active{
+  color: rgb(53, 0, 134) !important;
+}
+
+.header ul.remove-lists{
+  display: none !important;
+}
+
+.header {
+  width: 70%;
+  height: 65px;
+  background-color: rgba(255, 255, 255, 0.24);
+  transition: 0.4s;
+  position: fixed;
+  transform: 0.5s;
+  top: 18px;
+  border-radius: 40px;
+  filter: blur(0.5px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px 0 rgb(60, 60, 59);
+}
+
+.header ul{
+  width: 100%;
+  height: 100%;
+  border-radius:40px ;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  transition: .5s ;
+  transform: .5s;
+  margin: 0;
+}
+
+@media (max-width:660px){
+  .header ul{
+    display: none;
+  }
+  .header{
+    width: 65px;
+    justify-content: space-between;
+  
+  }
+}
+
+.header.hidden{
+  top: -70px;
+}
+
+.header.sticy{
+  top: 15px;
+  z-index: 99;
+}
+
+.btn{
+  position: relative;
+  height: 100%;
+  border-bottom-left-radius: 29px;
+  border-top-left-radius:29px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  width: 66px;
+  outline: none;
+  outline-offset: 0;
+  border-radius: 50% !important;
+}
+
+@media (min-width:660px){
+  .header ul{
+    width: 90%;
+  }
+  .header{
+    width: 60% !important;
+  }
+
+  .toggler{
+    display: none !important;
+  }
+
+  .btn{
+    display: none;
+  }
+}
+
+.btn:focus{
+  box-shadow: none;
+}
+
+.header.small{
+  width: 70% !important;
+}
+
+.btn.hidd{
+  background-color: transparent;
+}
+
+.header-icon{
+  font-size: 1.5rem;
+}
+
+.icon1.icon-toggle1{
+  display: none;
+}
+
+.icon2{
+  display: none;
+}
+
+.icon2.icon-toggle2{
+  display: block;
+}
+
+.btn .icon1, .icon2 {
+  font-size: 1.3rem;
+  color: rgb(0, 0, 0);
+  animation: icons 1s infinite;
+  transition: 0.3s ease-in-out;
+  position: relative;
+
+}
+
+.icon1:hover{
+  font-size:1.5rem ;
+}
+
+.icon2:hover{
+  font-size:1.5rem ;
+}
+
+@keyframes icons {
+  50%{
+    color: rgb(234, 236, 233); 
+  }
+  100%{
+    color: rgb(0, 0, 0);
+  }
+}
+
+#main video {
+  width: 100%;
+  height: 101vh;
+  object-fit: cover;
+  position: absolute;
+  z-index: -1;
+}
+
+#main .cover{
+  width: 100%;
+  height: 101vh;
+  background: rgba(0, 0, 0, 0.593);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile{
+  width: 150px;
+  height: 150px;
+  background-color: rgb(37, 39, 43);
+  filter: blur(.5px);
+  border-radius: 50%;
+  border: 20px solid rgb(53, 0, 134);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: content-box !important;
+  z-index: 99;
+  animation: animmi 3s infinite linear;
+  bottom: 21px;
+}
+
+
+@keyframes animmi{
+
+  75%{
+    transform: scale(1.07);
+  }
+}
+
+.profile img{
+  width: 145px;
+  height: 250px;
+  position: absolute;
+  top: -100px;
+  border-bottom-right-radius:90px ;
+  border-bottom-left-radius: 90px;
+  cursor: pointer;
+}
+
+.container {
+  width: 200px;
+  position: absolute;
+  height: 190px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  top: 64%;
+  padding: 0;
+}
+
+.container p {
+  font-size: 1.5rem;
+  color: aliceblue;
+  font-family: cursive;
+  font-weight: 600;
+}
+
+.container .icon3{
+  transform: rotate(90deg);
+  font-size: 3rem;
+  color: rgba(240, 248, 255, 0.422);
+  position: relative;
+  animation: animi 0.7s infinite alternate;
+}
+
+@keyframes animi{
+  10%{
+    top: 0px;
+  }
+  20%{
+    top: 5px;
+    opacity: 0.8;
+  }
+  30%{
+    top: 10px;
+  }
+  40%{
+    top: 15px;
+    opacity: 0.6;
+  }
+  
+  50%{
+    top: 20px;
+  }
+  
+  60%{
+    top: 25px;
+    opacity: 0.4;
+  }
+  
+  70%{
+    top: 30px;
+  }
+  
+  80%{
+    top: 35px;
+    opacity: 0.2;
+  }
+  90%{
+    top: 40px;
+  }
+  100%{
+    top: 465x;
+    opacity: 0;
+  }
+}
+
+@media (min-width:620px){
+  .container {
+    width: 300px;
+  }
+  .container p{
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+  }
+}
+
+.header .toggler{
+  width: 50px;
+  height: 50px;
+  position: relative;
+  left: -8%;
+  border-radius: 50%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.header .toggler .icon4{
+  font-size: 1.4rem ;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.toggleList{
+  width: 0%;
+  position: absolute;
+  height: 101vh;
+  background: rgba(255, 255, 255, 1) ;
+  z-index: 9999;
+  filter:opacity(0.6) ;
+  transition: 0.4s ease-in-out;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggleList ul{
+  width: 100%;
+  height: 40%;
+  display: flex;
+  align-items: center;
+  flex-direction:column;
+  justify-content: space-evenly;
+  position: relative;
+  left: -5%;
+}
+
+.toggleList ul li{
+  list-style-type: none;
+}
+
+.toggleList ul li a{
+  text-decoration: none;
+  color: rgb(0, 136, 255);
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family:cursive;
+  transition: 0.4s ease-in-out;
+}
+
+.toggle-list{
+  width: 100% !important; 
+}
+
+.toggle-list-hidden{
+  display: flex !important;
+}
+
+.toggleList .toggler{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  left: 80%;
+  top: 40px;
+  cursor: pointer;
+  background: rgba(135, 72, 231, 0.584);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggleList ul li .toggler{
+  display: inline-block !important;
+  position: static !important;
+  background: none;
+  height: 10px;
+  
+}
+
+.toggleList .toggler .icon4{
+  font-size: 1.9rem;
+}
+
+.hide-header{
+  visibility: hidden;
+}
+
+.footer{
+  width: 80%;
+  position: absolute;
+  top: 91%;
+  height: 50px;
+  z-index: 9999;
+  background: rgba(255, 255, 255, 0.24);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 27px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.footer div{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: red;
+  width: 100%;
+  height: 100%;
+  color: #000;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+
+
+
